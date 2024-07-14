@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhani Jaiswal - Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;  /* Dark Blue Gray */
+            --secondary-color: #34495e; /* Darker Blue Gray */
+            --accent-color: #4da6ff;   /* Bright Blue */
+            --text-color: #333333;     /* Dark Gray for text */
+            --background-color: #ecf0f1; /* Light Gray */
+            --white: #f0f8ff;
+            --section-background: #f8f9fa;
+
+        }
+        section {
+    margin-top: 80px;
+    padding: 40px;
+    background-color: var(--section-background);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#about .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+#about .about-text {
+    flex-grow: 1;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    #about .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+        body {
+           
+            font-family: 'Roboto', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(44, 62, 80, 0.95);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+       
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill-bubble {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-bubble:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background-color: var(--accent-color);
+        }
+
+        .projects-list, .experience-list, .education-list {
+            padding-left: 20px;
+        }
+
+        .projects-list li, .experience-list li, .education-list li {
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .projects-list li:hover, .experience-list li:hover, .education-list li:hover {
+            transform: translateX(5px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .achievements {
+            padding-left: 20px;
+            color: #4da6ff;
+        }
+        a:hover {
+  background-color: rgb(192, 233, 104);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about">
+            <div class="about-container">
+                <img src="suhani.jpg" alt="Suhani Jaiswal" class="profile-img">
+                <div class="about-text">
+                    
+                    <h1>Suhani Jaiswal</h1>
+                    <p>I am a dedicated full stack developer with a flair for building robust applications. Skilled in both server and client-side coding, I am always eager to learn and adopt new technologies. My passion for continuous improvement drives me to excel in creating seamless and efficient software solutions.</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">               
+                <div class="skill-bubble">Java</div>
+                <div class="skill-bubble">C++</div>
+                <div class="skill-bubble">Python</div>
+                <div class="skill-bubble">React.js</div>
+                <div class="skill-bubble">Node.js</div>
+                <div class="skill-bubble">HTML/CSS</div>
+                <div class="skill-bubble">JavaScript</div>
+                <div class="skill-bubble">MongoDB</div>
+                <div class="skill-bubble">MySQL</div>
+                <div class="skill-bubble">Git</div>
+                <div class="skill-bubble">Canva</div>
+            </div>
+        </section>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+         </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul class="projects-list">
+                <li><b><a href="https://github.com/SuhaniJ9/BlogNukkad">VIBETRIBE: </a></b>
+                    A MERN stack application designed to bring a centralized platform for college students. The app enables students to access information about recent events in other colleges and explore various college clubs. If interested, they can easily fill out forms to participate in events or join clubs through the app..</li><br>
+                <li><b><a class="hover" href="https://github.com/sanjaykohli/Collaborative-interest-application">BLOG NUKKAD:</a></b>
+                    Developed a MERN application which empowers admins to manage competitions and users, providing a space for users to write and read blogs. The primary highlight of Blog Nukkad is its focus on <i>competitions</i>, which aim to offer participants recognition and significance through their involvement.</li>
+                    
+               
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul class="experience-list">
+                <li>Full Stack Developer Trainee at Digipodium -
+                    <div class="achievements">
+                       <i> 06/2024-08/2024  <br>
+                        Achievements: </i>
+                    </div>
+                    <ul>
+                    
+                    <li>Mastering both backend and client-side coding, enhancing my skills in creating comprehensive web applications.</li>
+                    <li> Gaining proficiency in Google Auth for secure user authentication, leveraging hooks in React for efficient state management, and utilizing Next.js for server-side rendering. </li>
+                    <li> Utilizing MongoDB Atlas for scalable database management, implementing Tailwind CSS for streamlined and responsive design, and integrating various tools to create a seamless user experience.</li>
+                       </ul> 
+                </li>
+                <li>[Internship] at [Company] - [Date Range]</li>
+                
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul class="education-list">
+                <li>B.Tech in Computer Science(Specialization in Cyber Security) - NIIT University, Rajasthan - 2025 (65%)</li>
+                <li>Intermediate - City Montessori School, Lucknow - 2021 (96%)</li>
+                <li>High School - Seth M.R. Jaipuria School, Lucknow - 2019 (90%)</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
